@@ -1,6 +1,6 @@
 [package]
 name = "hooroar"
-version = "0.0.0"
+version = "0.0.1"
 description = "A realtime app for sending sounds to friends."
 authors = [ "Joshua Ferris" ]
 license = "MIT"
