@@ -1,28 +1,29 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <v-app>
+    <v-app-bar app color="teal lighten-3" dark dense>
+      <v-toolbar-title>Hooroar</v-toolbar-title>
+    </v-app-bar>
+    <v-main>
+      <Toast />
+      <Authenticate v-if="!user" />
+      <Sounds v-else />
+    </v-main>
+  </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import { mapState } from "vuex";
+import Toast from "./components/Toast";
+import Authenticate from "./views/Authenticate";
+import Sounds from "./views/Sounds";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Toast,
+    Authenticate,
+    Sounds,
   },
+  computed: mapState(["user"]),
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
