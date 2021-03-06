@@ -1,0 +1,26 @@
+[package]
+name = "hooroar"
+version = "0.0.0"
+description = "A realtime app for sending sounds to friends."
+authors = [ "Joshua Ferris" ]
+license = "MIT"
+repository = ""
+default-run = "hooroar"
+edition = "2018"
+build = "src/build.rs"
+
+[dependencies]
+serde_json = "1.0"
+serde = { version = "1.0", features = [ "derive" ] }
+tauri = { version = "0.11" }
+
+[target."cfg(windows)".build-dependencies]
+winres = "0.1"
+
+[features]
+embedded-server = [ "tauri/embedded-server" ]
+no-server = [ "tauri/no-server" ]
+
+[[bin]]
+name = "hooroar"
+path = "src/main.rs"

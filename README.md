@@ -1,24 +1,11 @@
-# hooroar
+# Hooroar
 
-## Project setup
-```
-yarn install
-```
+> A realtime app for sending sounds to friends.
 
-### Compiles and hot-reloads for development
-```
-yarn serve
-```
+## Windows Installer - Missing dll fix
 
-### Compiles and minifies for production
-```
-yarn build
-```
+Install the [Microsoft Visual C++ Redistributables](https://aka.ms/vs/16/release/vc_redist.x64.exe)
 
-### Lints and fixes files
-```
-yarn lint
-```
+## Prepare Computer for Tauri development
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+Official Tauri Guide for MacOS is [here](https://tauri.studio/en/docs/getting-started/setup-macos)
