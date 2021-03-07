@@ -27,3 +27,9 @@ export default {
   computed: mapState(["user"]),
 };
 </script>
+
+<style>
+::-webkit-scrollbar {
+    display: none;
+}
+</style>
